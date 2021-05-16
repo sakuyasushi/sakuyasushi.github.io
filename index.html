@@ -4,104 +4,985 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
+body, html {height: 90%}
+body{font-family: 'Kaushan Script', cursive;
 }
+h1 {font-family: 'Garamond', serif;
+}
+h2 {font-family: 'Garamond', serif;
+}
+h3,h4,h5,h6
+
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(Screen\ Shot\ 2021-05-12\ at\ 2.36.55\ PM.png);
+  min-height: 90%;
+}
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
 </style>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">Gourmet au Catering</a>
-    <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    </div>
-  </div>
-</div>
+  
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Le Catering</h1>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge" >Open from 11:30am to 8:30pm. 7 days a week
+    </span>
+  </div>
+
+  <div class="w3-display-topleft w3-padding">
+    <span class="w3-tag w3-xlarge" style = font-family:garamomd style = font-size:130px >  <div> 
+      <a href="https://www.google.com/maps/dir//Canada,+British+Columbia,+Surrey,+128th+St,+Sakuya+Japanese+Restaurant/@49.0310756,-122.9380112,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x5485c326c7608ab9:0xbc787a19f89812f0!2m2!1d-122.8679733!2d49.0312177" target="_blank">1593 128th St, Surrey, BC V4A 1N4 </a></p>
+  <div>  </div> 	
+  <a href="tel:6045355082 ">(604) 535-5082 </a>
+  </div> </span> 
+
+    </div>
+
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">     <br></span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b> <br> Sakuya Sushi </b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">     </a></p>
   </div>
 </header>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+ 
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
 
-  <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
-    </div>
+      <a href="javascript:void(0)" onclick="openMenu(event,'Appetizers');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 27px;" >Appetizers</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event,'Pasta');">
+        <div class="w3-col s4 tablink w3-padding- w3-hover-red" style="font-size: 28px;">Salads</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Tempura');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Tempura</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Rolls');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Rolls</div>
+      </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Special');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Special Rolls</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Sashimi');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Sashimi</div>
+        </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Nigiri');">
+            <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 28px;">Nigiri</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Teriyaki');">
+            <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Teriyaki</div>
+          </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Donburi');">
+              <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Donburi</div>
+            </a>
+              <a href="javascript:void(0)" onclick="openMenu(event, 'Noodles');">
+                <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Noodles</div>
+              </a>
+                <a href="javascript:void(0)" onclick="openMenu(event, 'Combos');">
+                  <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Sushi Combos</div>
+                </a>
+                  <a href="javascript:void(0)" onclick="openMenu(event, 'Family');">
+                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Roll Families</div>
+                  </a>
+                  <a href="javascript:void(0)" onclick="openMenu(event, 'Bento');">
+                      <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Lunch Bentos</div>
+                    </a>
+                      <a href="javascript:void(0)" onclick="openMenu(event, 'Dinner');">
+                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Dinner Boats</div>
+                      </a>
+                      <a href="javascript:void(0)" onclick="openMenu(event, 'Party');">
+                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Party Trays</div>
+                      </a>
+                      </div>
+  
 
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">About Catering</h1><br>
-      <h5 class="w3-center">Tradition since 1889</h5>
-      <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-      <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div id="Appetizers" class="w3-container menu w3-padding-32 w3-white">
+
+      <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Appetizers</p>
+      <h1><b>Miso Soup</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$1.75</span></h1> 
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; "> </p>
+  
+      <hr>
+
+      <h1><b>Rice</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$1.95</span></h1> 
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; "> </p>
+      <hr>
+   
+      <h1><b>Edamame</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$4.95</span></h1> 
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Salted Japanese style soy beans </p>
+      <hr>
+
+      <h1><b>Gomaae</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$4.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Boiled spinach with peanut butter dressing</p>
+      <hr>
+      
+      <h1><b>Agedashi Tofu</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Deep fried tofu with garnish and tempura sauce</p>
+      <hr>
+
+      <h1><b>Spicy Agedashi Tofu</b> <span class="w3-tag w3-red w3-round"></span> <span class="w3-right w3-tag w3-dark-grey w3-round">$5.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Deep fried tofu with garnish and spicy tempura sauce</p>
+      <hr>
+
+      <h1><b>Takoyaki</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$5.25</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Deep fried Japanese octopus balls, 5 pcs</p>
+      
+      <!-- <div class="hover_img" style="font-size: 15px;">
+        <a href="#">view<span><img src="takoyaki.jpeg" alt="image" height="200" /></span></a> </p>
+        
+   </div> -->
+   <hr>
+
+      <h1><b>Gyoza</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Pan fried pork and vegetable dumplings, 5 pcs</p>
+      <hr>
+
+      <h1><b>Chicken Karage</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$6.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Japanese style crispy deep fried chicken with drizzled ungai sauce and spicy mayo</p>
+      <hr>
+
+      <h1><b>Gyoza Nabe</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$7.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Japanese wonton soup</p>
+      <hr>
+
+
+<div class="w3-center">
+    <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+
+  </div>
+
+</div>
+  
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Salads</p>
+      <h1><b>Vegetable Sunomono</b> <span class="w3-tag w3-grey w3-round"></span> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.75</span></h1>
+      <p class="w3-text-grey"></p>
+      <hr>
+   
+      <h1><b>Ebi or Tako Sunomono</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$4.25</span></h1>
+      <p class="w3-text-grey"></p>
+      <hr>
+      
+      <h1><b>Seaweed Salad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$4.95</span></h1>
+      <p class="w3-text-grey"></p>
+      <hr>
+
+      <h1><b>Green Salad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$7.95</span></h1>
+      <p class="w3-text-grey"></p>
+      <p class="w3-text-grey"></p>
+      <hr>
+
+      <h1><b>Spicy Sashimi Salad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.95</span></h1>
+      <p class="w3-text-grey"></p>
+      <div class="hover_img" style="font-size: 15px;">
+        <a href="#">view<span><img src="spicysalad.JPG" alt="image" height="200" /></span></a> </p>
+      <hr>
+      </div>
+      <h1><b>Tuna Tataki Salad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.95</span></h1>
+      <!-- to hover -->
+      <div class="hover_img" style="font-size: 15px;">
+        <a href="#">view<span><img src="Tuna Tataki Salad.JPG" alt="image" height="200" /></span></a> </p>
+      
+   </div>
+
+    <div class="w3-center">
+      <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
     </div>
   </div>
-  
-  <hr>
-  
-  <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="menu">
-    <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Our Menu</h1><br>
-      <h4>Bread Basket</h4>
-      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
-    
-      <h4>Honey Almond Granola with Fruits</h4>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-    
-      <h4>Belgian Waffle</h4>
-      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
-    
-      <h4>Scrambled eggs</h4>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-    
-      <h4>Blueberry Pancakes</h4>
-      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>    
-    </div>
-    
-    <div class="w3-col l6 w3-padding-large">
-      <img src="/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
-    </div>
-  </div>
 
-  <hr>
+    <div id="Tempura" class="w3-container menu w3-padding-32 w3-white">
+      <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Tempura</p>
+      <h1><b>Small Tempura</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">2 pcs prawns, 3 pcs vegetables</p>
+      <hr>
+   
+      <h1><b>Yam Tempura</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$6.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Crispy yam tempura, 5 pcs</p>
+      <hr>
+      
+      <h1><b>Vegetable Tempura</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Assorted vegetables, 8pcs </p>
+      <hr>
+      
+      <h1><b>Assorted Tempura</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">2 pcs prawn, 8 pcs vegetable</p>
+      <hr>
 
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-64" id="contact">
-    <h1>Contact</h1><br>
-    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
-    <p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
-    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
-    </form>
+      <h1><b>Prawn Tempura </b> <span class="w3-right w3-tag w3-dark-grey w3-round">(S)$6.50/(L)$10.95</span> </h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; "> Crispy prawn tempura, 4 pcs (small) or 8 pcs (large)</p>
+      <hr>
+      <div class="w3-center">
+        <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+      </div>
+    </div>
+
+    <div id="Rolls" class="w3-container menu w3-padding-32 w3-white">
+      <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Rolls</p>
+
+      <p style="font-family:garamond; font-size: 49%; color: lightslategray" : align = "middle" >Let your server know if you have any allergies</p>
+      <p style="font-family:garamond; font-size: 49%; color: lightslategray" : align = "middle" >Temaki (cones) and maki avaliable upon request</p>
+      <p style="font-family:garamond; font-size: 49%; color: lightslategray" : align = "middle" >Brown rice +$0.75</p>
+
+      <hr>
+      <h1>
+        <h1 style = font-size:80% <b>Kappa Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$2.95</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Cucumber roll, 6 pcs</p>
+      <hr>
+   
+      <h1>
+        <h1 style = font-size:80% <b>Tamago Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.25</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Japanese soft omelette, 6 pcs</p>
+      <hr>
+
+      <h1>
+        <h1 style = font-size:80% <b>Avocado Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.25</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">6 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Asparagus Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.95</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">6 pcs</p>
+      <hr>
+
+      <h1>
+        <h1 style = font-size:80% <b>Tuna or Salmon Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.95</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Albacore tuna or sockeye salmon, 6 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>California Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.95</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Crab meat, cucumber and avocado, 8 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Salmon Avocado Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.25</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">6 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Spicy Tuna or Spicy Salmon Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.50</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">6 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Vegetable Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.75</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Spring mix, cucumber, carrot, bell pepper, avocado ,5 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Negitoro Roll </b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.25</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Tuna belly and green onion, 6 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Yam Tempura Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.75</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">5 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Mango Avocado Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.75</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">6 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>B.C. Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.95</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Barbequed salmon skin with crab meat, cucumber, avocado, and unagi sauce, 5 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Teriyaki Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.95</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Choice of beef or chicken teriyaki, 5 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Chop Scallop Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.50</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Chop scallop with masago, 6 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Dynamite Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.95</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Prawn and yam tempura, crab meat, cucumber, avocado, 5 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Salmon Tempura Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.75</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Salmon tempura, crab meat, cucumber, avocado, 5 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Unagi Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$6.25</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Freshwater eel, 6 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>House Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$7.25</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Tuna, crab meat, cucumber, avocado inside and salmon on top, 5 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Philadelphia Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$7.25</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Cream cheese, crab meat, cucumer, avocado inside. Smoked salmon and unagi sauce on top, 8 pcs</p>
+      <hr>
+      
+      <h1 style = font-size:80% <b>Alaska Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$7.25</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Crab meat, ebi, masago, cucumber, avocado inside. Smoked salmon and unagi sauce on top, 8 pcs</p>
+      <hr>
+    
+      <h1 style = font-size:80% <b>Crunch Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$7.25</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">2 pcs prawn tempura, crab meat, cucumber and avocado inside. Tempura flakes and unagi sauce on top, 8 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Rainbow Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$7.95</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Assorted sashimi on top of a california roll. Unagi sauce drizzled on top, 8 pcs</p>
+      <hr>
+
+      <h1 style = font-size:80% <b>Spider Roll</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$8.75</span></h1>
+      <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Deep fried soft shell crab, crab meat, cucumer and avocado with unagi sauce and mayo, 5 pcs</p>
+      <hr>
+      <div class="w3-center">
+        <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+      </div>
+    </div>
+
+    
+<!-- split -->
+      <div id="Special" class="w3-container menu w3-padding-32 w3-white">
+        <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Special Rolls</p>
+  <p style="font-family:garamomd; font-size: 60%; color:gray": align = "middle" ></p>
+  <p style="font-family:garamomd; font-size: 60%; color:black": align = "middle" ></p>
+
+
+
+   <!-- First Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="Sakuya Roll.JPG" alt="Steak" style="width:100%">
+      <h1><b>Sakuya Roll</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 50%; color: dimgrey; "> Prawn, cucumber, avocado and crab meat on the inside. Seared salmon and tuna on top with avocado. Sauce: ungai sauce and spicy mayo. </p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$10.95</span></h1>
+        </p>
+      </div>
+
+    <div class="w3-quarter">
+      <img src="Crazy Boy Roll.JPG" alt="Steak" style="width:100%">
+      <h1><b>Crazy Boy Roll</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 50%; color: dimgrey; ">Deep fried roll with asparagus, cream cheese, cucumber, avocado and crab meat. Sauce: hot sauce, unagi sauce and spicy mayo.</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+        </p>
+      </div>
+
+      <div class="w3-quarter">
+        <img src="Paradice Roll.JPG" alt="Steak" style="width:100%">
+        <h1><b>Paradise Roll</b> <span class="w3-tag w3-grey w3-round"></span>
+          <p style="font-family:garamond; font-size: 50%; color: dimgrey; ">Prawn tempura, crab meat, cucumber, avocado inside. Sliced mango on top. Sauce: house made mango sauce, 8pcs </p>
+          <span class="w3-middle w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+          </p>
+        </div>
+
+    <div class="w3-quarter">
+      <img src="IMG_1320.JPG" alt="Pasta and Wine" style="width:100%">
+      <h1><b>Fire Cracker Roll</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 50%; color: dimgrey; ">Torched spicy chop scallop, cucumber, avocado and crab meat inside. Spicy tuna on top. Sauce: unagi sauce and spicy mayo, 8 pcs</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+        </p>
+      </div>
+
   </div>
   
-<!-- End page content -->
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+
+    <div class="w3-quarter">
+      <img src="Tropical Roll.JPG" alt="Steak" style="width:100%">
+      <h1><b>Tropical Roll</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 50%; color: dimgrey; ">Prawn tempura, crab meat, cucumber and avocado inside. Ebi and avocado on top. Sauce: unagi sauce and spicy mayo, 8 pcs</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+        </p>
+      </div>
+
+      <div class="w3-quarter">
+        <img src="niagara.JPG" alt="Steak" style="width:100%">
+        <h1><b>Niagara Roll</b> <span class="w3-tag w3-grey w3-round"></span>
+          <p style="font-family:garamond; font-size: 50%; color: dimgrey; ">California roll topped with tai belly kabayaki, avocado, tobiko and tempura flakes, 8 pcs</p>
+          <span class="w3-middle w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+          </p>
+        </div>
+  
+
+        <div class="w3-quarter">
+          <img src="newcatroll.JPG" alt="Steak" style="width:100%">
+          <h1><b>Caterpillar Roll</b> <span class="w3-tag w3-grey w3-round"></span>
+            <p style="font-family:garamond; font-size: 50%; color: dimgrey; ">Unagi, crab meat, cucumber and avocado on the inside. Topped with sliced avocado. Sauce: unagi sauce, 8 pcs</p>
+            <span class="w3-middle w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+            </p>
+          </div>
+
+          <div class="w3-quarter">
+            <img src="baked.JPG" alt="Steak" style="width:100%">
+            <h1><b>Baked Scallop Roll</b> <span class="w3-tag w3-grey w3-round"></span>
+              <p style="font-family:garamond; font-size: 50%; color: dimgrey; ">Spicy tuna, crab meat, cucumber and avocado inside. Scallop and tobiko on top, baked overall. Sauce: spicy mayo and unagi sauce, 8 pcs</p>
+              <span class="w3-middle w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+              </p>
+            </div>
+
+            <div class="w3-quarter">
+              <img src="dragonroll.JPG" alt="Steak" style="width:100%">
+              <h1><b>Dragon Roll</b> <span class="w3-tag w3-grey w3-round"></span>
+                <p style="font-family:garamond; font-size: 50%; color: dimgrey; ">Crab meat, cucumber and avocado inside. Unagi, sliced avocado and masago on top. Sauce: unagi sauce.  8 pcs</p>
+                <span class="w3-middle w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+                </p>
+              </div>
+  </div>
+  <div class="w3-center">
+    <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+  </div>
 </div>
 
+
+  <!-- Menu Container for Sashmi -->
+      <div id="Sashimi" class="w3-container menu w3-padding-32 w3-white">
+        <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Sashimi</p>
+        <h1><b>Appetizer Sashimi</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$7.95</span></h1>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Sockeye salmon 3 pcs, tuna 2 pcs</p>
+        <hr>
+     
+        <h1><b>Tuna Sashimi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">(S)$7.95/(L)$13.95</span></h1>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; "> 5 pcs or 10 pcs </p>
+        <hr>
+        
+        <h1><b>Salmon Sashimi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">S)$7.95/(L)$13.95</span></h1>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">5 pcs or 10 pcs </p>
+        <hr>
+        
+        <h1><b>Large Salmon and Tuna Sashimi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.95<span></h1>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">5 pcs salmon and 5 pcs tuna sashimi</p>
+        <hr>
+  
+        <h1><b>Assorted Sashimi </b> <span class="w3-right w3-tag w3-dark-grey w3-round">(S)$18.95/(L)$27.95</span> </h1>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; "> 15 or 25 pcs of assorted sashimi</p>
+        <hr>
+        <div class="w3-center">
+          <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+        </div>
+      </div>
+
+  <!-- Menu Container for NIGIRI -->
+  <div id="Nigiri" class="w3-container menu w3-padding-32 w3-white">
+      
+    <p style="font-family:Kaushan script; font-size: 99%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Nigiri </p> 
+
+    <p style="font-family:garamond; font-size: 69%; color:black": align = "middle" > ~ Prices for 2 pcs ~ </p>
+    <p style="font-family:garamond; font-size: 49%; color: lightslategray" : align = "middle" >Brown rice +$0.50</p> 
+
+
+    <hr>
+    <h1>
+      <h1 style = font-size:80% <b>Inari</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$2.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Bean curd pockets</p>
+   
+    <!-- ufhwefu -->
+ 
+    <h1>
+      <h1 style = font-size:80% <b>Tamago</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$2.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Japanese soft omelettes</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Masago</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$2.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Smelt Roe</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Tai</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$2.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Red Snapper</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Salmon</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Sockeye salmon</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Smoked Salmon</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; "></p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Tuna</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; "
+      ></p>    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Tataki</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Seared salmon or seared tuna with light tataki dressing</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Chop Scallop</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; "></p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Toro</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Tuna belly with green onion</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Ebi</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Shrimp</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Tobiko</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; "></p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Saba</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Mackerel</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Hokkigai</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$3.99</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Surf Clam</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Amaebi</b> <span class="w3-tag w3-grey w3-round"> seasonal</span>  <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.25</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Sweet Shrimp</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Unagi</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.25</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Freshwater eel</p>
+    <hr>
+
+    <h1>
+      <h1 style = font-size:80% <b>Tako</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$4.25</span></h1>
+    <p style="font-family:garamond; font-size: 45%; color: dimgrey; ">Octopus</p>
+    <hr>
+    <div class="w3-center">
+      <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+    </div>
+    </div>
+<!-- container for teriyaki-->
+    <div id="Teriyaki" class="w3-container menu w3-padding-32 w3-white">
+      <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Teriyaki Meals</p>
+      <p style="font-family:garamomd; font-size: 60%; color:black": align = "middle" >~ Served with miso soup and rice ~</p>
+
+      <h1><b>Teriyaki</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$11.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Choose from chicken, beef or tofu</p>
+      <hr>
+   
+      <h1><b>Chicken Breast Teriyaki</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; "></p>
+      <hr>
+      
+      <h1><b>Salmon Teriyaki</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.95</span></h1>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; "></p>
+      <hr>
+      <div class="w3-center">
+        <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+      </div>
+  </div>
+  <!-- container for teriyaki-->
+  <div id="Donburi" class="w3-container menu w3-padding-32 w3-white">
+    <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Donburi Rice Bowls</p>
+    <p style="font-family:garamomd; font-size: 60%; color:black": align = "middle" >~ Served with miso soup ~</p>
+
+    <h1><b>Teriyaki Donburi</b> <span class="w3-tag w3-grey w3-round"></span><span class="w3-right w3-tag w3-dark-grey w3-round">$11.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Choose from chicken, beef or tofu</p>
+    <hr>
+ 
+    <h1><b>Unagi Donburi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; "></p>
+    <hr>
+    
+    <h1><b>Tuna & Salmon Donburi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; "></p>
+    <hr>
+
+    <h1><b>Chirashi Donburi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Assorted sashimi on sushi rice </p>
+    <hr>
+    <div class="w3-center">
+      <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+    </div>
+</div>
+
+  <!-- container for noodles-->
+  <div id="Noodles" class="w3-container menu w3-padding-32 w3-white">
+    <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Noodles</p>
+    <p style="font-family:garamomd; font-size: 60%; color:black": align = "middle" ></p>
+ 
+    <h1><b>Udon</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; "> Choose from vegetable, chicken or beef</p>
+    <hr>
+    
+    <h1><b>Tempura Udon</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Served with 1pcs prawn and 3 pcs vegetables </p>
+    <hr>
+
+    <h1><b>Nabeyaki Udon</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Served with 2pcs prawn </p>
+    <hr>
+    
+    <h1><b>Spicy Ramen</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Choose from vegetable, chicken or beef </p>
+    <hr>
+
+    <h1><b>Yakisoba</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Pan fried soba noodles with tofu, chicken or beef teriyaki. Served with miso soup </p>
+    <hr>
+
+    <h1><b>Yakiudon</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.95</span></h1>
+    <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Pan fried thick udon noodles with tofu, chicken or beef teriyaki. Served with miso soup </p>
+    <hr>
+
+    <div class="w3-center">
+      <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+    </div>
+</div>
+
+  <!-- container for sushi combos-->
+  <div id="Combos" class="w3-container menu w3-padding-32 w3-white">
+    <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Sushi Combos</p>
+    <p style="font-family:garamomd; font-size: 60%; color:black": align = "middle" > ~ Served with miso soup ~</p>
+    
+   
+   <!-- First Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-half">
+      <img src="Sakuya A.JPG" alt="Steak" style="width:100%">
+      <h1><b>Sakuya A</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; "> 6 pcs spicy tuna roll, 4 pcs of sashimi, 4 pcs of nigiri </p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$16.95</span></h1>
+        </p>
+      </div>
+
+    <div class="w3-half">
+      <img src="sakuyaB.JPG" alt="Steak" style="width:100%">
+      <h1><b>Sakuya B</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">4 pcs california roll, 3 pcs spicy tuna roll, 4 pcs of sashimi, 6 pcs of nigiri</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$18.95</span></h1>
+        </p>
+      </div>
+
+
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+
+    <div class="w3-quarter">
+      <img src="California Combo.JPG" alt="Steak" style="width:100%">
+      <h1><b>California Combo</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">California roll with 5 pcs of nigiri</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+        </p>
+      </div>
+
+      
+      <div class="w3-quarter">
+        <img src="Dynamite Combo.JPG" alt="Steak" style="width:100%">
+        <h1><b>Dynamite/BC Roll Combo</b> <span class="w3-tag w3-grey w3-round"></span>
+          <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Dynamite or B.C. roll with 5 pcs of nigiri</p>
+          <span class="w3-middle w3-tag w3-dark-grey w3-round">$13.95</span></h1>
+          </p>
+        </div>
+
+      <div class="w3-quarter">
+        <img src="housecombo.JPG" alt="Steak" style="width:100%">
+        <h1><b>House Combo</b> <span class="w3-tag w3-grey w3-round"></span>
+          <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">House roll with 5 pcs of nigiri </p>
+          <span class="w3-middle w3-tag w3-dark-grey w3-round">$14.95</span></h1>
+          </p>
+        </div>
+
+
+        <div class="w3-quarter">
+          <img src="rainbowcombo.JPG" alt="Steak" style="width:100%">
+          <h1><b>Rainbow Roll Combo</b> <span class="w3-tag w3-grey w3-round"></span>
+            <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Rainbow roll with 5 pcs of nigiri</p>
+            <span class="w3-middle w3-tag w3-dark-grey w3-round">$15.95</span></h1>
+            </p>
+          </div>
+
+        </div>
+        <div class="w3-center">
+          <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+        </div>
+            </div>
+  
+
+<!-- container for roll families-->
+
+<div id="Family" class="w3-container menu w3-padding-32 w3-white">
+  <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Roll Families</p>
+  <p style="font-family:garamomd; font-size: 60%; color:black": align = "middle" ></p>
+
+  
+   <!-- First Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+    <div class="w3-third">
+      <img src="California Family.JPG" alt="Steak" style="width:100%">
+      <h1><b>California Family</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Crispy, spicy and regular california rolls, 24 pcs</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$11.95</span></h1>
+        </p>
+      </div>
+  
+
+    <div class="w3-third">
+      <img src="Spicy Family.JPG" alt="Steak" style="width:100%">
+      <h1><b>Spicy Family</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Spicy salmon, spicy tuna and spicy chop scallop roll, 18 pcs</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+        </p>
+      </div>
+    
+    <div class="w3-third">
+      <img src ="Vegetable Tray.JPG" alt="Cherries" style="width:100%">
+      <h1><b>Vegetable Family</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Vegetable roll, avocado roll and kappa roll, 17 pcs</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$10.95</span></h1>
+        </p>
+      </div>
+
+  </div>
+  <div class="w3-center">
+    <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+  </div>
+</div>
+
+
+
+
+<!-- container for bentos-->
+<div id="Bento" class="w3-container menu w3-padding-32 w3-white">
+  <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Lunch Bentos</p>
+  <p style="font-family:garamomd; font-size: 60%; color:gray": align = "middle" > From 11:30am - 3:00pm only</p>
+  <p style="font-family:garamomd; font-size: 60%; color:black": align = "middle" > ~ served with miso soup ~ </p>
+
+<div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+  <div class="w3-half">
+    <img src="chickenlunch].JPG" alt="Steak" style="width:100%">
+    <h1><b>Teriyaki Bento</b> <span class="w3-tag w3-grey w3-round"></span>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Chicken or beef teriyaki with rice. Served with california roll (8 pcs), 1 pcs prawn and 2 pcs veggie tempura, salad, edamame and fruit</p>
+      <span class="w3-middle w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+      </p>
+    </div>
+
+
+  <div class="w3-half">
+    <img src="Vegetable Box.JPG" alt="Steak" style="width:100%">
+    <h1><b>Vegetable Bento</b> <span class="w3-tag w3-grey w3-round"></span>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Tofu teriyaki with rice. Served with a vegetable roll (5 pcs), 4 pcs veggie tempura, salad, edamame and fruit</p>
+      <span class="w3-middle w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+      </p>
+    </div>
+  
+  <div class="w3-half">
+    <img src ="Sushi Box (1).JPG" alt="Cherries" style="width:100%">
+    <h1><b>Sushi Bento</b> <span class="w3-tag w3-grey w3-round"></span>
+      <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">4 pcs nigiri sushi with california roll (8 pcs), 1 pcs prawn and 2 pcs veggie tempura, salad, edamame and fruit</p>
+      <span class="w3-middle w3-tag w3-dark-grey w3-round">$13.95</span></h1>
+      </p>
+    </div>
+
+    <div class="w3-half">
+      <img src ="Roll Box.JPG" alt="Cherries" style="width:100%">
+      <h1><b>Roll Bento</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">4 pcs dynamite roll and 3 pcs spicy tuna roll. Served with a california roll (8 pcs), 1 pcs prawn and 2 pcs veggie tempura, salad, edamame and fruit</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$12.95</span></h1>
+        </p>
+      </div>
+
+</div>
+<div class="w3-center">
+  <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+</div>
+</div>
+
+
+
+
+<!-- container for dinner boats -->
+<div id="Dinner" class="w3-container menu w3-padding-32 w3-white">
+  <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Dinner Boats</p>
+  <p style="font-family:garamomd; font-size: 60%; color:gray": align = "middle" ></p>
+  <p style="font-family:garamomd; font-size: 60%; color:black": align = "middle" > ~ served with miso soup and small sunomono ~ </p>
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+      <div class="w3-third">
+        <img src="1.JPG" alt="Steak" style="width:100%">
+        <h1><b>Sushi and Sashimi Dinner Boat</b> <span class="w3-tag w3-grey w3-round"></span>
+          <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">4 pcs sashimi, 3 pcs nigiri sushi with a house roll (5 pcs), 2 pcs prawn and 2 pcs veggie tempura, salad, edamame and fruit</p>
+          <span class="w3-middle w3-tag w3-dark-grey w3-round">$16.95</span></h1>
+          </p>
+        </div>
+    
+ 
+      <div class="w3-third">
+        <img src="chickenDBT.JPG" alt="Steak" style="width:100%">
+        <h1><b>Teriyaki Dinner Boat</b> <span class="w3-tag w3-grey w3-round"></span>
+          <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Chicken or beef teriyaki with a dynamite roll (5 pcs), 2 pcs prawn and 2 pcs veggie tempura, salad, edamame and fruit</p>
+          <span class="w3-middle w3-tag w3-dark-grey w3-round">$16.95</span></h1>
+          </p>
+        </div>
+      
+      <div class="w3-third">
+        <img src ="179.JPG" alt="Cherries" style="width:100%">
+        <h1><b>Vegetable Dinner Boat</b> <span class="w3-tag w3-grey w3-round"></span>
+          <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">Tofu teriyaki with a vegetable roll, 4 pcs veggie tempura, salad, edamame and fruit</p>
+          <span class="w3-middle w3-tag w3-dark-grey w3-round">$18.95</span></h1>
+          </p>
+        </div>
+  
+    </div>
+    <div class="w3-center">
+      <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+    </div>
+</div>
+
+
+<!-- container for party trays -->
+<div id="Party" class="w3-container menu w3-padding-32 w3-white">
+  <p style="font-family:Kaushan script; font-size: 94%; background-color:rgb(48, 43, 43); color:blanchedalmond": align = "middle" >Party Trays</p>
+  <p style="font-family:garamomd; font-size: 60%; color:gray": align = "middle" ></p>
+  <p style="font-family:garamomd; font-size: 60%; color:black": align = "middle" ></p>
+
+
+   <!-- First Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+    <div class="w3-quarter">
+      <img src="trayA.JPG" alt="Steak" style="width:100%">
+      <h1><b>Tray A</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: rgb(43, 40, 40); "> 43 pcs</p>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; "> California roll (8 pcs), Dynamite roll (5 pcs), Kappa roll (6 pcs), Salmon roll (6 pcs), Spicy tuna roll(6 pcs), 12 pcs nigiri sushi</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$32.95</span></h1>
+        </p>
+      </div>
+
+    <div class="w3-quarter">
+      <img src="TRAYB.JPG" alt="Steak" style="width:100%">
+      <h1><b>Tray B</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: rgb(43, 40, 40); "> 54 pcs</p>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">California roll (8 pcs), Dynamite roll (5 pcs), House roll (5 pcs), Kappa roll (6 pcs), Salmon roll(6 pcs), Spicy tuna roll(6 pcs), 18 pcs nigiri sushi</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$45.95</span></h1>
+        </p>
+      </div>
+
+      <div class="w3-quarter">
+        <img src="favtray.JPG" alt="Steak" style="width:100%">
+        <h1><b>Favorite Roll Tray</b> <span class="w3-tag w3-grey w3-round"></span>
+          <p style="font-family:garamond; font-size: 60%; color: rgb(43, 40, 40); "> 42 pcs</p>
+        <p style="font-family:garamond; font-size: 60%; color: dimgrey; ">California roll(16 pcs), Dynamite roll(15 pcs), Spicy tuna roll (6 pcs), Yam tempura roll (5 pcs)</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$28.95</span></h1>
+        </p>
+      </div>
+
+    <div class="w3-quarter">
+      <img src="crunchtray.JPG" alt="Pasta and Wine" style="width:100%">
+      <h1 style="font-size:40px;"><b>Crunch Tray</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: rgb(43, 40, 40);"> 36 pcs</p>
+        <p style="font-family:garamond; font-size: 57%; color: dimgrey; ">Dynamite roll(10 pcs), Yam tempura roll (10 pcs), Crunch roll (16 pcs)</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$28.95</span></h1>
+        </p>
+      </div>
+
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+
+    <div class="w3-quarter">
+      <img src="vegetray.JPG" alt="Steak" style="width:100%">
+      <h1><b>Vegetable Tray</b> <span class="w3-tag w3-grey w3-round"></span>
+        <p style="font-family:garamond; font-size: 60%; color: rgb(43, 40, 40);"> 43 pcs</p>
+        <p style="font-family:garamond; font-size: 55%; color: dimgrey; ">Veggie roll (15 pcs),  Yam tempura roll (10 pcs), Avocado roll (6 pcs), Kappa roll (12 pcs)</p>
+        <span class="w3-middle w3-tag w3-dark-grey w3-round">$26.95</span></h1>
+        </p>
+      </div>
+
+      <div class="w3-quarter">
+        <img src="newspicytray.JPG" alt="Steak" style="width:100%">
+        <h1><b>Spicy Tray</b> <span class="w3-tag w3-grey w3-round"></span>
+          <p style="font-family:garamond; font-size: 60%; color: rgb(43, 40, 40);"> 48 pcs</p>
+          <p style="font-family:garamond; font-size: 50%; color: dimgrey; ">Spicy tuna roll (12 pcs), Spicy salmon roll (6 pcs), Spciy scallop roll (6 pcs), Spicy california roll (8 pcs), Spicy kappa roll (6 pcs), Spicy veggie roll (5 pcs), Spicy dynamite roll (5 pcs) </p>
+          <span class="w3-middle w3-tag w3-dark-grey w3-round">$30.95</span></h1>
+          </p>
+        </div>
+  
+
+        <div class="w3-quarter">
+          <img src="special tray.JPG" alt="Steak" style="width:100%">
+          <h1><b>Sakuya Special Roll Tray</b> <span class="w3-tag w3-grey w3-round"></span>
+            <p style="font-family:garamond; font-size: 60%; color: rgb(43, 40, 40);"> 49 pcs</p>
+            <p style="font-family:garamond; font-size: 55%; color: dimgrey; ">Niagara roll (8 pcs), Paradise roll (8 pcs), Tropical roll (8 pcs), Dynamite roll (5 pcs), Spicy tuna roll (6 pcs), Salmon avocado roll (6 pcs), California roll (8 pcs)</p>
+            <span class="w3-middle w3-tag w3-dark-grey w3-round">$43.95</span></h1>
+            </p>
+          </div>
+
+          <div class="w3-quarter">
+            <img src="ssmtray.JPG" alt="Steak" style="width:100%">
+            <h1 style="font-size: 40px;"><b>Nigiri & Sashimi Tray</b> <span class="w3-tag w3-grey w3-round"></span>
+              <p style="font-family:garamond; font-size: 25px; color: rgb(43, 40, 40);"> 34 pcs</p>
+              <p style="font-family:garamond; font-size: 18px; color: dimgrey; ">Tuna sashimi (5 pcs), Salmom sashimi (5 pcs), Nigiri 4 pcs each (Salmon, Tuna, Ebi, Hokkigai, Tuna tataki, Tamago) </p>
+              <span class="w3-middle w3-tag w3-dark-grey w3-round">$42.95</span></h1>
+              </p>  
+  </div>
+
+</div>
+<div class="w3-center">
+  <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
+
+</div>
+
+
+</div>
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
 </footer>
 
-</body>
-</html>
+<div class="w3-container w3-padding-32 w3-center">  
+  <h3>About</h3><br>
+  <img src="IMG_0965.JPG" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+  <div class="w3-padding-32">
+
+    <p>Located in Ocean Park</p>
+    <p>Proudly uses sustainable take out boxes</p>
+    <a href="tel:6045355082 "> Call: (604) 535-5082 </a>
+  </div>
+</div>
+<hr>
+
+
+<script>
+  // Tabbed Menu
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-red";
+  }
+  document.getElementById("myLink").click();
+  </script>
+  
+  </body>
+  </html>
