@@ -26,6 +26,35 @@ h3,h4,h5,h6
   min-height: 90%;
 }
 
+/* Create a Parallax Effect */
+.bgimg-1 {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Footer Image (Restaurant Picture) */
+.bgimg-1 {
+    background-image: url("IMG_0965.jpg");
+    min-height: 300px;
+}
+
+.bgimg-1-hide-large, .bgimg-1-hide-medium {
+    background-size: 140%;
+}
+
+.bgimg-1-hide-small {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.gm-style .gm-style-iw {
+   font-size: 16px;
+   font-weight: bold;
+   font-family: sans-serif;
+   text-transform: uppercase;
+   color: black;
+}
+
 .hover_img a { position:relative; }
 .hover_img a span { position:absolute; display:none; z-index:99; }
 .hover_img a:hover span { display:block; }
@@ -83,34 +112,34 @@ h3,h4,h5,h6
         <a href="javascript:void(0)" onclick="openMenu(event, 'Sashimi');">
           <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Sashimi</div>
         </a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Nigiri');">
-            <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Nigiri</div>
-          </a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Teriyaki');">
-            <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Teriyaki</div>
-          </a>
-            <a href="javascript:void(0)" onclick="openMenu(event, 'Donburi');">
-              <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Donburi</div>
-            </a>
-              <a href="javascript:void(0)" onclick="openMenu(event, 'Noodles');">
-                <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Noodles</div>
-              </a>
-                <a href="javascript:void(0)" onclick="openMenu(event, 'Combos');">
-                  <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Sushi Combos</div>
-                </a>
-                  <a href="javascript:void(0)" onclick="openMenu(event, 'Family');">
-                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Roll Families</div>
-                  </a>
-                  <a href="javascript:void(0)" onclick="openMenu(event, 'Bento');">
-                      <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Lunch Bentos</div>
-                    </a>
-                      <a href="javascript:void(0)" onclick="openMenu(event, 'Dinner');">
-                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Dinner Boats</div>
-                      </a>
-                      <a href="javascript:void(0)" onclick="openMenu(event, 'Party');">
-                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Party Trays</div>
-                      </a>
-                      </div>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Nigiri');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Nigiri</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Teriyaki');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Teriyaki</div>
+      </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Donburi');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Donburi</div>
+        </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Noodles');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Noodles</div>
+      </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Combos');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Sushi Combos</div>
+        </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Family');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Roll Families</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Bento');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Lunch Bentos</div>
+        </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Dinner');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Dinner Boats</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Party');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red" style="font-size: 30px;">Party Trays</div>
+      </a>
+    </div>
   
 
     <div id="Appetizers" class="w3-container menu w3-padding-32 w3-white">
@@ -194,14 +223,13 @@ h3,h4,h5,h6
       <p class="w3-text-grey"></p>
       <div class="hover_img" style="font-size: 15px;">
         <a>view<span><img src="spicysalad.JPG" alt="image" height="200" /></span></a> </p>
-      <hr>
+        <hr>
       </div>
       <h1><b>Tuna Tataki Salad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.95</span></h1>
       <!-- to hover -->
       <div class="hover_img" style="font-size: 15px;">
         <a>view<span><img src="Tuna Tataki Salad.JPG" alt="image" height="200" /></span></a> </p>
-      
-   </div>
+      </div>
 
     <div class="w3-center">
       <a href="#menu" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right" ></i>To the top</a>  
@@ -956,14 +984,28 @@ h3,h4,h5,h6
 
 
 </div>
+
+</div>
+</div> <!-- id menu closing div>
+
+<!-- First Parallax Image with Portfolio Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min w3-hide-small bgimg-1-hide-small" id="sakuyaRestaurantPicHideSmall">
+</div>
+<div class="bgimg-1 w3-display-container w3-opacity-min w3-hide-large w3-hide-medium bgimg-1-hide-large bgimg-1-hide-medium" id="sakuyaRestaurantPicShowSmall">
+</div>
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
-</footer>
 
 <div class="w3-container w3-padding-32 w3-center">  
-  <h3>About</h3><br>
-  <img src="IMG_0965.JPG" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
-  <div class="w3-padding-32">
+    <p>Location and Contact</p>
+
+    <div class="w3-col m6 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+
+  <div class="w3-padding-16">
 
     <p>Located in Ocean Park</p>
     <p>Proudly uses sustainable take out boxes</p>
@@ -972,8 +1014,35 @@ h3,h4,h5,h6
 </div>
 <hr>
 
+</footer>
 
 <script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(49.031248963442884, -122.867859716846);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: true, draggable: true,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  
+  var infowindow = new google.maps.InfoWindow({
+    content:"Sakuya Sushi"
+  });
+  
+  google.maps.event.addListener(marker, 'click', function() {
+    var url = "https://www.google.com/maps/dir//Canada,+British+Columbia,+Surrey,+128th+St,+Sakuya+Japanese+Restaurant/@49.0310756,-122.9380112,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x5485c326c7608ab9:0xbc787a19f89812f0!2m2!1d-122.8679733!2d49.0312177";
+    window.open(url, "_blank");
+  });
+  marker.setMap(map);
+  infowindow.open(map,marker);
+}
+
   // Tabbed Menu
   function openMenu(evt, menuName) {
     var i, x, tablinks;
@@ -989,7 +1058,9 @@ h3,h4,h5,h6
     evt.currentTarget.firstElementChild.className += " w3-red";
   }
   document.getElementById("myLink").click();
-  </script>
   
+  
+  </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK6z1bgOphFUv2M_6aX-xphZ_m9EnLUrQ&callback=myMap"></script>  
   </body>
   </html>
